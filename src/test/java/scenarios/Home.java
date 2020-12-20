@@ -16,14 +16,14 @@ public class Home {
         String url = "https://www.trendyol.com";
 
         // TODO: Switch with parameter browsers
-        String pathToChromeDriver = "browserdrivers/chrome/chromedriver";
-        String pathToGeckoDriver = "browserdrivers/gecko/geckodriver";
+        //String pathToChromeDriver = "browserdrivers/chrome/chromedriver.exe";
+        String pathToGeckoDriver = "browserdrivers/gecko/geckodriver.exe";
 
-        System.setProperty("webdriver.chrome.driver", pathToChromeDriver);
-        driver = new ChromeDriver();
+        //System.setProperty("webdriver.chrome.driver", pathToChromeDriver);
+        //driver = new ChromeDriver();
 
-        // System.setProperty("webdriver.gecko.driver", pathToGeckoDriver);
-        // driver = new FirefoxDriver();
+        System.setProperty("webdriver.gecko.driver", pathToGeckoDriver);
+        driver = new FirefoxDriver();
 
         driver.navigate().to(url);
         Assert.assertEquals("Verify that the desired page is opened", url + "/", driver.getCurrentUrl());
