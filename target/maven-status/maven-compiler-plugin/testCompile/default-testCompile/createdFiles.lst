@@ -1,3 +1,5 @@
-scenarios\Home.class
+scenarios\HomePage.class
 LoginTest.class
+scenarios\ButiqePage.class
+scenarios\BasePage.class
 scenarios\Login.class

@@ -21,6 +21,7 @@ public class Login {
         // Enter the username and password
         UiUtils.typeTextAfterWait(UiUtils.getWebElementByID("login-email"), 10, "enizgulek@gmail.com");
         UiUtils.typeTextAfterWait(UiUtils.getWebElementByID("login-password-input"), 10, "matrix44");
+
     }
 
     @And("^Click the login form submit button$")
