@@ -15,8 +15,8 @@ import org.openqa.selenium.WebElement;
 
 public class ButiqePage {
 
-    @And("^At women butiqe page$")
-    public void atWomenButiqePage() throws Exception {
+    @And("^At boutique page$")
+    public void atBoutiquePage() throws Exception {
 
         //close pop-up
         Thread.sleep(6000);

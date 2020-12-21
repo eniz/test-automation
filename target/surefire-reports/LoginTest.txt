@@ -1,24 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: LoginTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 44.47 s <<< FAILURE! - in LoginTest
-Given At women butiqe page(Scenario: Check butiqe image in all tabs)  Time elapsed: 0.009 s  <<< ERROR!
-org.openqa.selenium.StaleElementReferenceException: 
-The element reference of <div class="modal-close"> stale: either the element is no longer attached to the DOM or the page has been refreshed
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'T1LPRVT1922', ip: '172.27.226.173', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 321216, moz:profile: C:\Users\is96729\AppData\Lo..., pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: b6bc7fb0-7875-4c2d-8ca3-1051011a374a
-
-Scenario: Check butiqe image in all tabs  Time elapsed: 0.011 s  <<< ERROR!
-org.openqa.selenium.StaleElementReferenceException: 
-The element reference of <div class="modal-close"> stale: either the element is no longer attached to the DOM or the page has been refreshed
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'T1LPRVT1922', ip: '172.27.226.173', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 321216, moz:profile: C:\Users\is96729\AppData\Lo..., pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: b6bc7fb0-7875-4c2d-8ca3-1051011a374a
-
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 50.223 s - in LoginTest

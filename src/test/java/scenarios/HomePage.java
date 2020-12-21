@@ -29,7 +29,7 @@ public class HomePage extends BasePage {
         Assert.assertEquals("Verify that the desired page is opened", url + "/", driver.getCurrentUrl());
 
         //close pop-up
-        UiUtils.closePopup(UiUtils.getWebElementByCSSSelector(".fancybox-wrap a[title=\"Close\"]"), 10);
+        closePopup(UiUtils.getWebElementByCSSSelector(".fancybox-wrap a[title=\"Close\"]"), 10);
 
         //click account button
         UiUtils.clickWebElementAfterWait(UiUtils.getWebElementByID("accountBtn"), 10);

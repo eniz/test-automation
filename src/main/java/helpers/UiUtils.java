@@ -81,15 +81,7 @@ public class UiUtils {
             throw new Exception("Cannot find WebElement " + webElement);
         }
     }
-    public static void closePopup(WebElement webElement, int waitTimeInSeconds) throws Exception {
-        Thread.sleep(6000);
 
-        if (isWebElementIsDisplayed(webElement, waitTimeInSeconds)) {
-            webElement.click();
-        } else {
-            throw new Exception("Cannot find WebElement " + webElement);
-        }
-    }
 
     /**
      * Helper method to wait for a given webElement and get text after it's displayed

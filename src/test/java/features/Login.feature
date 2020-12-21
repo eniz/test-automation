@@ -4,7 +4,7 @@ Feature: Trendyol Test Feature
       Given Login Trendyol with username and password
 
   Scenario: Check butiqe image in all tabs
-      Given At women butiqe page
+      Given At boutique page
 
  #Scenario: Check all tabs
     #Given Navigate to "https://www.trendyol.com"
