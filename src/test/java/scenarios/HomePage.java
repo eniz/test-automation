@@ -32,6 +32,7 @@ public class HomePage extends BasePage {
         closePopup(UiUtils.getWebElementByCSSSelector(".fancybox-wrap a[title=\"Close\"]"), 10);
 
         //click account button
+        Thread.sleep(2000);
         UiUtils.clickWebElementAfterWait(UiUtils.getWebElementByID("accountBtn"), 10);
 
         //enter username and pass

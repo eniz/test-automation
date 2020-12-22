@@ -12,7 +12,7 @@ Feature: Trendyol Test Feature
        Given At boutique page
        When Go to boutique detail page
        Then At boutique detail page
-       When I choose first product
-       #And I basket product
-       #Then I should see
+       When Choose first product
+       Then At product detail page
+       When Add product in basket
 

@@ -1,5 +1,6 @@
 scenarios\BoutiqueDetailPage.class
 scenarios\HomePage.class
 UITest.class
+scenarios\ProductDetailPage.class
 scenarios\BoutiqueListPage.class
 scenarios\BasePage.class

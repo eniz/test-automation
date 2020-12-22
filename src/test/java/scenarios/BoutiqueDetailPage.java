@@ -3,17 +3,29 @@ package scenarios;
 import cucumber.api.java.en.And;
 import helpers.UiUtils;
 import org.junit.Assert;
+import org.openqa.selenium.NoSuchElementException;
 
 public class BoutiqueDetailPage {
     @And("^At boutique detail page$")
     public void atBoutiqueDetailPage() throws Exception {
         Thread.sleep(6000);
-        Assert.assertTrue(UiUtils.isWebElementIsDisplayed(UiUtils.getWebElementByID("boutique-detail-app"), 3));
+        try{
+            boolean isBoutique = UiUtils.isWebElementIsDisplayed(UiUtils.getWebElementByID("boutique-detail-app"), 3);
+            boolean isSearch = UiUtils.isWebElementIsDisplayed(UiUtils.getWebElementByID("search-app"), 3);
+
+            Assert.assertTrue(isBoutique || isSearch);
+        }
+        catch (NoSuchElementException exception){
+            exception.printStackTrace();
+        }
+
+
     }
-    @And("^I choose first product$")
+
+    @And("^Choose first product$")
     public void chooseFirstProduct() throws Exception {
         Thread.sleep(6000);
-        UiUtils.getItemList(".products .boutique-product img").get(0).click();
+        UiUtils.getItemList(".p-card-img").get(0).click();
     }
 
 }
