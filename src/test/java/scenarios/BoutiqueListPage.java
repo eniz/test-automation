@@ -26,14 +26,11 @@ public class BoutiqueListPage {
         //UiUtils.clickWebElementAfterWait(UiUtils.getWebElementByCSSSelector("a[href=\"/butik/liste/erkek\"]"), 3);
 
     }
-
-
-
     @And("^Go to boutique detail page$")
     public void goToBoutiiqueAndClickProduct() throws Exception {
         Thread.sleep(6000);
         UiUtils.clickWebElementAfterWait(UiUtils.getWebElementByCSSSelector("a[href=\"/butik/liste/kadin\"]"), 3);
         Thread.sleep(6000);
-        UiUtils.getBigBoutiquesImages().get(0).click();
+        UiUtils.getItemList(".component-big-list .component-item img").get(0).click();
     }
 }

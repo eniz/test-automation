@@ -99,9 +99,9 @@ public class UiUtils {
         }
     }
 
-    public static List<WebElement> getBigBoutiquesImages(){
-        List<WebElement> imagesOfBigBoutiques;
-        imagesOfBigBoutiques = driver.findElements(By.cssSelector(".component-big-list .component-item img"));
-        return imagesOfBigBoutiques;
+    public static List<WebElement> getItemList(String selectorName){
+        List<WebElement> imagesOfList;
+        imagesOfList = driver.findElements(By.cssSelector(selectorName));
+        return imagesOfList;
     }
 }
