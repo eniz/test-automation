@@ -1,5 +1,5 @@
+scenarios\BoutiqueDetailPage.class
 scenarios\HomePage.class
-LoginTest.class
-scenarios\ButiqePage.class
+UITest.class
+scenarios\BoutiqueListPage.class
 scenarios\BasePage.class
-scenarios\Login.class

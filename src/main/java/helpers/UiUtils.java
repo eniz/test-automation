@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 public class UiUtils {
 
     public static WebDriver driver;
@@ -97,5 +99,9 @@ public class UiUtils {
         }
     }
 
-
+    public static List<WebElement> getBigBoutiquesImages(){
+        List<WebElement> imagesOfBigBoutiques;
+        imagesOfBigBoutiques = driver.findElements(By.cssSelector(".component-big-list .component-item img"));
+        return imagesOfBigBoutiques;
+    }
 }

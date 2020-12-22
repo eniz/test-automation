@@ -12,7 +12,7 @@ import cucumber.api.java.en.Given;
 public class HomePage extends BasePage {
 
     @And("^Login Trendyol with username and password$")
-    public void loginTrendyolWithUsernamAndPassword() throws Exception {
+    public void loginTrendyolWithUsernameAndPassword() throws Exception {
         String url = "https://www.trendyol.com";
 
         // TODO: Switch with parameter browsers
@@ -35,7 +35,9 @@ public class HomePage extends BasePage {
         UiUtils.clickWebElementAfterWait(UiUtils.getWebElementByID("accountBtn"), 10);
 
         //enter username and pass
-        Thread.sleep(5000);
+        Thread.sleep(6000);
+
+        // TODO: Get email and password from credentials config file
         UiUtils.typeTextAfterWait(UiUtils.getWebElementByID("login-email"), 10, "enizgulek@gmail.com");
         UiUtils.typeTextAfterWait(UiUtils.getWebElementByID("login-password-input"), 10, "matrix44");
 
@@ -44,29 +46,5 @@ public class HomePage extends BasePage {
 
         //verify "sepetim"
         Assert.assertEquals("The user is logged in", UiUtils.getTextAfterWait(UiUtils.getWebElementByID("myBasketListItem"), 10), "Sepetim");
-    }
-    @Given("^Navigate to \"([^\"]*)\"$")
-    public void navigateTo(String arg0) throws Throwable {
-        String url = "https://www.trendyol.com";
-
-        // TODO: Switch with parameter browsers
-        //String pathToChromeDriver = "browserdrivers/chrome/chromedriver.exe";
-        String pathToGeckoDriver = "browserdrivers/gecko/geckodriver.exe";
-
-        //System.setProperty("webdriver.chrome.driver", pathToChromeDriver);
-        //driver = new ChromeDriver();
-
-        System.setProperty("webdriver.gecko.driver", pathToGeckoDriver);
-        driver = new FirefoxDriver();
-
-        driver.navigate().to(url);
-        Assert.assertEquals("Verify that the desired page is opened", url + "/", driver.getCurrentUrl());
-    }
-
-    @And("^Click the login menu$")
-    public void clickTheLoginMenu() throws Exception {
-        UiUtils.clickWebElementAfterWait(UiUtils.getWebElementByCSSSelector(".fancybox-wrap a[title=\"Close\"]"), 10);
-
-        UiUtils.clickWebElementAfterWait(UiUtils.getWebElementByID("accountBtn"), 10);
     }
 }

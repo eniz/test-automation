@@ -5,7 +5,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/java/features/Login.feature"
+        features = "src/test/java/features/TrendyolUI.feature"
 )
-public class LoginTest {
+public class UITest {
 }
