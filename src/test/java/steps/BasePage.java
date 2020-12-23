@@ -1,4 +1,4 @@
-package scenarios;
+package steps;
 
 import helpers.UiUtils;
 import org.openqa.selenium.WebElement;
@@ -7,6 +7,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+
+
 
 public class BasePage {
     public static Properties prop;

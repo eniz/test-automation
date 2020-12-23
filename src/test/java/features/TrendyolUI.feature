@@ -1,7 +1,7 @@
 Feature: Trendyol Test Feature
 
   Background:
-      Given Login Trendyol with username and password
+      And Login Trendyol with username and password
 
   #2
 #  Scenario: Check boutique images in all tabs

@@ -1,5 +1,7 @@
-scenarios\BoutiqueDetailPage.class
 scenarios\HomePage.class
+base\BaseClass.class
+Hook.class
+scenarios\BoutiqueDetailPage.class
 UITest.class
 scenarios\ProductDetailPage.class
 scenarios\BoutiqueListPage.class

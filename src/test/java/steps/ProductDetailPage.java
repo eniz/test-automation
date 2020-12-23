@@ -1,10 +1,9 @@
-package scenarios;
+package steps;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import helpers.UiUtils;
 import org.junit.Assert;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 public class ProductDetailPage {
@@ -21,8 +20,6 @@ public class ProductDetailPage {
         Thread.sleep(6000);
         //click basket button
 
-        //JavascriptExecutor js = (JavascriptExecutor) driver;
-        //((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
         UiUtils.clickWebElementAfterWait(UiUtils.getWebElementByCSSSelector(".add-to-bs"), 10);
     }
 

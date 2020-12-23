@@ -1,4 +1,4 @@
-package scenarios;
+package steps;
 
 import helpers.UiUtils;
 import cucumber.api.java.en.And;
