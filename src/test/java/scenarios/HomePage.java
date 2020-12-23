@@ -7,7 +7,6 @@ import static helpers.UiUtils.driver;
 import helpers.UiUtils;
 import org.junit.Assert;
 import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
 
 public class HomePage extends BasePage {
 
@@ -15,16 +14,21 @@ public class HomePage extends BasePage {
     public void loginTrendyolWithUsernameAndPassword() throws Exception {
         String url = "https://www.trendyol.com";
 
-        // TODO: Switch with parameter browsers
-        //String pathToChromeDriver = "browserdrivers/chrome/chromedriver.exe";
-        String pathToGeckoDriver = "browserdrivers/gecko/geckodriver.exe";
+        String browser = System.getProperty("browser");
 
-        //System.setProperty("webdriver.chrome.driver", pathToChromeDriver);
-        //driver = new ChromeDriver();
+        if (browser.equalsIgnoreCase("firefox")) {
+            String pathToGeckoDriver = "browserdrivers/gecko/geckodriver.exe";
+            System.setProperty("webdriver.gecko.driver", pathToGeckoDriver);
 
-        System.setProperty("webdriver.gecko.driver", pathToGeckoDriver);
-        driver = new FirefoxDriver();
+            driver = new FirefoxDriver();
+        } else if (browser.equalsIgnoreCase("chrome")) {
+            String pathToChromeDriver = "browserdrivers/chrome/chromedriver.exe";
+            System.setProperty("webdriver.chrome.driver", pathToChromeDriver);
 
+            driver = new ChromeDriver();
+        }
+
+        driver.manage().window().maximize();
         driver.navigate().to(url);
         Assert.assertEquals("Verify that the desired page is opened", url + "/", driver.getCurrentUrl());
 
