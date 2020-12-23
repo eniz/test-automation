@@ -10,6 +10,7 @@ import cucumber.api.java.en.And;
 
 public class HomePage extends BasePage {
 
+
     @And("^Login Trendyol with username and password$")
     public void loginTrendyolWithUsernameAndPassword() throws Exception {
         String url = "https://www.trendyol.com";
@@ -26,6 +27,11 @@ public class HomePage extends BasePage {
             System.setProperty("webdriver.chrome.driver", pathToChromeDriver);
 
             driver = new ChromeDriver();
+        } else {
+            String pathToGeckoDriver = "browserdrivers/gecko/geckodriver.exe";
+            System.setProperty("webdriver.gecko.driver", pathToGeckoDriver);
+
+            driver = new FirefoxDriver();
         }
 
         driver.manage().window().maximize();
@@ -43,8 +49,9 @@ public class HomePage extends BasePage {
         Thread.sleep(6000);
 
         // TODO: Get email and password from credentials config file
-        UiUtils.typeTextAfterWait(UiUtils.getWebElementByID("login-email"), 10, "enizgulek@gmail.com");
-        UiUtils.typeTextAfterWait(UiUtils.getWebElementByID("login-password-input"), 10, "matrix44");
+
+        UiUtils.typeTextAfterWait(UiUtils.getWebElementByID("login-email"), 10, prop.getProperty("email"));
+        UiUtils.typeTextAfterWait(UiUtils.getWebElementByID("login-password-input"), 10, prop.getProperty("password"));
 
         //click submit button
         UiUtils.clickWebElementAfterWait(UiUtils.getWebElementByCSSSelector("button[type=\"submit\"]"), 10);
