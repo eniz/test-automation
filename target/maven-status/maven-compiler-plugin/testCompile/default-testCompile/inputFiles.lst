@@ -1,8 +1,8 @@
-D:\Repos\trendyolbdd\test-automation\src\test\java\scenarios\ProductDetailPage.java
+D:\Repos\trendyolbdd\test-automation\src\test\java\steps\BoutiqueDetailPage.java
+D:\Repos\trendyolbdd\test-automation\src\test\java\steps\BoutiqueListPage.java
 D:\Repos\trendyolbdd\test-automation\src\test\java\Hook.java
 D:\Repos\trendyolbdd\test-automation\src\test\java\base\BaseClass.java
-D:\Repos\trendyolbdd\test-automation\src\test\java\scenarios\BoutiqueListPage.java
-D:\Repos\trendyolbdd\test-automation\src\test\java\scenarios\HomePage.java
-D:\Repos\trendyolbdd\test-automation\src\test\java\scenarios\BasePage.java
-D:\Repos\trendyolbdd\test-automation\src\test\java\scenarios\BoutiqueDetailPage.java
+D:\Repos\trendyolbdd\test-automation\src\test\java\steps\HomePage.java
+D:\Repos\trendyolbdd\test-automation\src\test\java\steps\BasePage.java
 D:\Repos\trendyolbdd\test-automation\src\test\java\UITest.java
+D:\Repos\trendyolbdd\test-automation\src\test\java\steps\ProductDetailPage.java

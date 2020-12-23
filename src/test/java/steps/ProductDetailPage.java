@@ -5,6 +5,9 @@ import cucumber.api.java.en.When;
 import helpers.UiUtils;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class ProductDetailPage {
     public static WebDriver driver;
@@ -13,6 +16,20 @@ public class ProductDetailPage {
     public void atBoutiqueDetailPage() throws Exception {
         Thread.sleep(6000);
         Assert.assertTrue(UiUtils.isWebElementIsDisplayed(UiUtils.getWebElementByCSSSelector(".ph-gl-w"), 3));
+    }
+
+    @Then("^Check product images$")
+    public void checkProductImages() throws Exception {
+        Thread.sleep(6000);
+        List<WebElement> productImageList = UiUtils.getItemList(".pd-img img");
+
+        for (WebElement boutiqueImage: productImageList) {
+            if (UiUtils.isImageLoaded(boutiqueImage)) {
+                System.out.println("All images loaded");
+            } else {
+                System.out.println("Image not found");
+            }
+        }
     }
 
     @When("^Add product in basket$")

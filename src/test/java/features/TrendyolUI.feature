@@ -15,6 +15,7 @@ Feature: Trendyol Test Feature
        Then At boutique detail page
        When Choose first product
        Then At product detail page
+       Then Check product images
 
   #4
 #  Scenario: Go to product detail and add basket

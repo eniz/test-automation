@@ -1,8 +1,8 @@
-scenarios\HomePage.class
 base\BaseClass.class
+steps\BoutiqueListPage.class
+steps\ProductDetailPage.class
+steps\HomePage.class
 Hook.class
-scenarios\BoutiqueDetailPage.class
+steps\BasePage.class
 UITest.class
-scenarios\ProductDetailPage.class
-scenarios\BoutiqueListPage.class
-scenarios\BasePage.class
+steps\BoutiqueDetailPage.class
