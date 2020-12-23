@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 
 public class ProductDetailPage {
     public static WebDriver driver;
+
     @Then("^At product detail page$")
     public void atBoutiqueDetailPage() throws Exception {
         Thread.sleep(6000);

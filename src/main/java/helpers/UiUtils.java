@@ -105,6 +105,20 @@ public class UiUtils {
         return imagesOfList;
     }
 
+    public static boolean isImageLoaded(WebElement element) {
+        Boolean isImageLoaded = (Boolean) ((JavascriptExecutor)driver).executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", element);
+
+        return isImageLoaded;
+    }
+
+    public static void clickOn(By locator, int timeout)
+    {
+        final WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.refreshed(
+                ExpectedConditions.elementToBeClickable(locator)));
+        driver.findElement(locator).click();
+    }
+
     public static void scrollDown() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         try {

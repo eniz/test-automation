@@ -9,17 +9,12 @@ public class BoutiqueDetailPage {
     @And("^At boutique detail page$")
     public void atBoutiqueDetailPage() throws Exception {
         Thread.sleep(6000);
-        try{
+        try {
             boolean isBoutique = UiUtils.isWebElementIsDisplayed(UiUtils.getWebElementByID("boutique-detail-app"), 3);
-            boolean isSearch = UiUtils.isWebElementIsDisplayed(UiUtils.getWebElementByID("search-app"), 3);
-
-            Assert.assertTrue(isBoutique || isSearch);
-        }
-        catch (NoSuchElementException exception){
+            Assert.assertTrue(isBoutique);
+        } catch (NoSuchElementException exception){
             exception.printStackTrace();
         }
-
-
     }
 
     @And("^Choose first product$")
