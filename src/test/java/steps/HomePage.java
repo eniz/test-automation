@@ -18,8 +18,6 @@ public class HomePage extends BasePage {
         //enter username and pass
         Thread.sleep(6000);
 
-        // TODO: Get email and password from credentials config file
-
         UiUtils.typeTextAfterWait(UiUtils.getWebElementByID("login-email"), 10, prop.getProperty("email"));
         UiUtils.typeTextAfterWait(UiUtils.getWebElementByID("login-password-input"), 10, prop.getProperty("password"));
 
